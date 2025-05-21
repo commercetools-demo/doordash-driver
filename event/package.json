@@ -1,0 +1,49 @@
+{
+  "name": "doordash-driver-connector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node build/index.js",
+    "gcp-build": "tsc",
+    "start:dev": "concurrently -k \"tsc --watch\" \"nodemon -q build/index.js\"",
+    "build": "rimraf ./build && tsc",
+    "lint": "eslint . --ext .ts",
+    "prettier": "prettier --write '**/*.{js,ts}'",
+    "test": "echo \"No tests specified\"",
+    "test:watch": "echo \"No tests specified\""
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.3",
+    "@types/express": "^4.17.14",
+    "@types/jest": "^29.2.0",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^18.11.4",
+    "@types/validator": "^13.7.10",
+    "@typescript-eslint/eslint-plugin": "^5.45.1",
+    "@typescript-eslint/parser": "^5.45.1",
+    "axios": "^1.9.0",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.46.0",
+    "jest": "^29.6.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.1",
+    "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@commercetools-backend/loggers": "^21.19.0",
+    "@commercetools/platform-sdk": "^4.1.0",
+    "@commercetools/sdk-client-v2": "^2.0.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "listr2": "^6.6.1",
+    "validator": "^13.11.0"
+  },
+  "packageManager": "npm@10.9.0+sha512.65a9c38a8172948f617a53619762cd77e12b9950fe1f9239debcb8d62c652f2081824b986fee7c0af6c0a7df615becebe4bf56e17ec27214a87aa29d9e038b4b"
+}
